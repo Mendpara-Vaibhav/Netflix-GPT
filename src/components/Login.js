@@ -11,12 +11,12 @@ const Login = () => {
   const password = useRef(null);
 
   const handleButtonClick = () => {
-    // console.log(name.current.value);
+    console.log(name.current?.value);
     console.log(email.current.value);
     console.log(password.current.value);
 
     const message = checkValidData(
-      name.current.value,
+      isSignInForm ? null : name.current?.value,
       email.current.value,
       password.current.value
     );
