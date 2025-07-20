@@ -21,10 +21,6 @@ const Login = () => {
   const password = useRef(null);
 
   const handleButtonClick = () => {
-    // console.log(name.current?.value);
-    // console.log(email.current.value);
-    // console.log(password.current.value);
-
     const message = checkValidData(
       isSignInForm ? null : name.current?.value,
       email.current.value,
@@ -42,7 +38,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
           updateProfile(user, {
             displayName: name.current.value,
             photoURL: USER_AVATAR,
@@ -76,7 +71,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
