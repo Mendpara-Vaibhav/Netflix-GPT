@@ -4,13 +4,19 @@ import GptMovieSuggestions from "./GptMovieSuggestions";
 
 const GptSearch = () => {
   return (
-    <div>
-      <div className="absolute -z-10">
-        <img src={BG_URL_GPT} alt="logo" />
+    <>
+      <div className="fixed -z-10">
+        <img
+          className="h-screen w-screen object-cover"
+          src={BG_URL_GPT}
+          alt="logo"
+        />
       </div>
-      <GptSearchBar />
-      <GptMovieSuggestions />
-    </div>
+      <div>
+        <GptSearchBar />
+        <GptMovieSuggestions />
+      </div>
+    </>
   );
 };
 
